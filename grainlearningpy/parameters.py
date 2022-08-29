@@ -1,7 +1,6 @@
 import typing as t
 import numpy as np
 
-from scipy.stats import qmc
 
 
 # TODO add so that the user can input a dataframe with initial parameters
@@ -68,6 +67,8 @@ class Parameters:
 
         :param num_samples: number of simulations
         """
+        
+        from scipy.stats import qmc
         halton_sampler = qmc.Halton(self.num_params, scramble=False)
         param_table = halton_sampler.random(n=num_samples)
 

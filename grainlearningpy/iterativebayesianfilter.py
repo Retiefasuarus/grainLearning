@@ -2,7 +2,7 @@
 
 import numpy as np
 import typing as t
-from scipy import optimize
+# from scipy import optimize
 from .models import Model
 
 from .sequentialmontecarlo import SequentialMonteCarlo
